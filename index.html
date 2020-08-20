@@ -157,13 +157,15 @@
     </div>
     <div id = "resume" class = "post">
         <h1>resume.</h1>
-        <embed src="Official Resume.pdf" type= "application/pdf" width="80%" height="60%">
-        <p>
+        <p id = "paragraph-post">
+            <embed src="Official Resume.pdf" type= "application/pdf" width="80%" height="60%">
+            <br>
             <button type="button" class="btn btn-outline-dark" id="buttonText" onclick="smoothScroll(document.getElementById('projects'))">next</button>
         </p>
     </div>
     <div id = "projects" class = "post">
         <h1>projects.</h1>
+        <p id="paragraph-post">
         <ul class="list-inline">
             <li class="list-inline-item">
                 <div class="card" style="width: 18rem;">
@@ -196,8 +198,8 @@
                 </div>
             </li>
         </ul>
-        <p>
-            <button type="button" class="btn btn-outline-dark" id="returnBtn" onclick="smoothScroll(document.getElementById('navbarSupportedContent'))">return</button>
-        </p>
+        <br>
+        <button type="button" class="btn btn-outline-dark" id="returnBtn" onclick="smoothScroll(document.getElementById('navbarSupportedContent'))">return</button>
+    </p>
     </div>
 </body>
