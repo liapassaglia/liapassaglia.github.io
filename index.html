@@ -1,1 +1,204 @@
-Hello World
+<!-- PERSONAL WEBSITE -->
+<style>
+    .image{
+        background-image: url("img/background.png");
+        background-position-y: -200px;
+        background-position-y: -2.25cm;
+    }
+    .text h1{
+        font-family: 'Sanchez', serif;
+        font-weight: 500;
+        font-size: 1.75cm;
+        color: black;
+        padding: 0%;
+    }
+    #subtext{
+        padding: 0%;
+        font-family: 'Sanchez', serif;
+        font-size: 1cm;
+        color: black;
+    }
+    #contactInfo{
+        font-family: 'Sanchez', serif;
+        font-size: 0.5cm;
+        color: black;
+    }
+    #about{
+        background-color: rgb(248, 247, 246);
+    }
+    #resume{
+        background-color: rgb(233, 220, 211);
+    }
+    #projects{
+        background-color: rgb(220, 204, 192);
+    }
+    .btn{
+        margin-top: 10px;
+        font-family: 'Sanchez', serif;
+        color: black;
+        font-weight: bold;
+    }
+    .fa{
+        padding: 10px;
+        font-size: 40px;
+        width: 40px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        background: rgb(26, 25, 25);
+        color: #F3EDE4;
+    }
+    .fa:hover {
+        color: #F3EDE4;
+    }
+    .card-body{
+        background-color: rgb(248, 247, 246);
+    }
+    #returnBtn{
+        position: relative;
+        bottom: 80px;
+    }
+</style>
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Maria-Lia Passaglia</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+    <script src="script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="stylefyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar-font" style="background-color:rgb(248, 247, 246);">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" justify-content-between>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="./index.html">home.<span class="sr-only">(current)</span></a>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li class="nav-item active">
+              <a class="nav-link" href="#about">about me.</a>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li class="nav-item active">
+              <a class="nav-link" href="#resume">resume.</a>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li class="nav-item active">
+              <a class="nav-link" href="#projects">projects.</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item disabled">
+                <a class="nav-link" href="#" style=font-size:1cm>ia.</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <!--landing page-->
+    <div class="image">
+        <div class="text">
+            <h1>Maria-Lia Passaglia</h1>
+            <p id = "subtext">creative design & developer.</p>
+            <p>
+                <button type="button" class="btn btn-outline-dark" onclick="smoothScroll(document.getElementById('about'))">get to know me.</button>
+            </p>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="https://github.com/liapassaglia" class="fa fa-github"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/maria-lia-passaglia/" class="fa fa-linkedin"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/marialia.passaglia/" class="fa fa-facebook"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com/liapassaglia/" class="fa fa-instagram"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://open.spotify.com/user/lia_passaglia" class="fa fa-spotify"></a>
+                </li>
+            </ul>
+            <p id = "contactInfo">like what you see...contact me at liapassaglia@gmail.com</p>
+        </div>
+    </div>
+    <!--blog like post-->
+    <div id = "about" class = "post">
+        <h1>about me.</h1>
+
+        <p id = "paragraph-post">
+            Growing up I embraced my creativity through art and music so when it came time to decide my future career I knew one very simple fact. I needed a space to create.
+            <br>When I took my first programming class, I quickly realized the world of technology would become that space. With every line of code I wrote, my eagerness to learn more
+            heightened as I recognized the endless possibilites for design and development. 
+           
+            <br><br>Today, I am currently a Junior at the University of Florida pursuing a Bachelor's degree in Computer Engineering and a minor in Business Administration. My main interests are
+            in mobile applications, full-stack development, UX/UI design, frontend development and project management. This site serves as a way to showcase the progress I'm making
+            towards gaining new experiences and skills and I'm excited to continue updating it with new projects very soon. 
+            <br>I invite you to explore the space!
+        </p>
+        <img src="img/FSC ID Photo.png" alt="image of me" width="200";>
+        <p>
+            <button type="button" class="btn btn-outline-dark" id="buttonText" onclick="smoothScroll(document.getElementById('resume'))">next</button>
+        </p>
+    </div>
+    <div id = "resume" class = "post">
+        <h1>resume.</h1>
+        <embed src="Official Resume.pdf" type= "application/pdf" width="80%" height="60%">
+        <p>
+            <button type="button" class="btn btn-outline-dark" id="buttonText" onclick="smoothScroll(document.getElementById('projects'))">next</button>
+        </p>
+    </div>
+    <div id = "projects" class = "post">
+        <h1>projects.</h1>
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="img/CLUBFINITY.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">mobile application.</h5>
+                      <p class="card-text">contributed to the development of a cross-platform mobile app designed to provide UF student organizations a platform to manage and promote their events by connecting them with students.</p>
+                      <a href="https://gitlab.com/ufsec/clubfinity" class="btn btn-outline-dark" >check it out.</a>
+                    </div>
+                </div>
+            </li>
+            <li class="list-inline-item">
+                <div class="card" style="width: 18rem;">
+                    
+                    <img class="card-img-top" src="img/minesweeper.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">classic videogame.</h5>
+                      <p class="card-text">developing the game strengthened both my knowledge of object-oriented programming and the use of frameworks and libraries such as SFML’s graphics library.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="list-inline-item">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="img/invsystem.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">simple inventory system.</h5>
+                      <p class="card-text">contributed to the creation of an inventory system that handles all the system’s data and compares the execution times of AVL vs Map data structures for large data sets (100,000+). </p>
+                      <a href="https://github.com/imjoelrios/InventorySystem" class="btn btn-outline-dark">check it out.</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <p>
+            <button type="button" class="btn btn-outline-dark" id="returnBtn" onclick="smoothScroll(document.getElementById('navbarSupportedContent'))">return</button>
+        </p>
+    </div>
+</body>
