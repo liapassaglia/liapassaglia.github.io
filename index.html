@@ -10,7 +10,7 @@
         font-weight: 500;
         font-size: 1.75cm;
         color: black;
-        padding: 0%;
+        padding-top: 40px;
     }
     #subtext{
         padding: 0%;
@@ -23,8 +23,12 @@
         font-size: 0.5cm;
         color: black;
     }
+    .flexrow{
+        content: right;
+    }
     #about{
         background-color: rgb(248, 247, 246);
+        justify-content: center;
     }
     #resume{
         background-color: rgb(233, 220, 211);
@@ -143,7 +147,8 @@
     <div class="container">
     <!--blog like post-->
     <div class="flex-row">
-    <div id = "about">
+        <div class="col-xs-1 text-center">
+        <div id = "about">
         <h1>about me.</h1>
         <p id = "paragraph-post">
             Growing up I embraced my creativity through art and music so when it came time to decide my future career I knew one very simple fact. I needed a space to create.
@@ -159,10 +164,12 @@
             <br>
             <button type="button" class="btn btn-outline-dark" id="buttonText" onclick="smoothScroll(document.getElementById('resume'))">next</button>
         </p>
-    </div>
+        </div>
+        </div>
     </div>
     <div class="flex-row">
-    <div id = "resume" class = "post">
+    <div class="col-xs-1 text-center">
+    <div id = "resume">
         <h1>resume.</h1>
         <p id = "paragraph-post">
             <embed src="Official Resume.pdf" type= "application/pdf" width="80%" height="60%">
@@ -171,8 +178,10 @@
         </p>
     </div>
     </div>
+    </div>
     <div class="flex-row">
-    <div id = "projects" class = "post">
+    <div class="col-xs-1 text-center">
+    <div id = "projects">
         <h1>projects.</h1>
         <p id="paragraph-post">
         <ul class="list-inline">
@@ -210,6 +219,7 @@
         <br>
         <button type="button" class="btn btn-outline-dark" id="returnBtn" onclick="smoothScroll(document.getElementById('navbarSupportedContent'))">return</button>
     </p>
+    </div>
     </div>
     </div>
 </div>
