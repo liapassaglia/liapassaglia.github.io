@@ -12,6 +12,13 @@
         color: black;
         padding-top: 40px;
     }
+    .flex-row h1{
+        font-family: 'Sanchez', serif;
+        font-weight: 500;
+        font-size: 1.5cm;
+        color: black;
+        padding-top: 20px;
+    }
     #subtext{
         padding: 0%;
         font-family: 'Sanchez', serif;
@@ -32,9 +39,11 @@
     }
     #resume{
         background-color: rgb(233, 220, 211);
+        justify-content: center;
     }
     #projects{
         background-color: rgb(220, 204, 192);
+        justify-content: center;
     }
     .btn{
         margin-top: 10px;
@@ -60,7 +69,7 @@
     }
     #returnBtn{
         position: relative;
-        bottom: 80px;
+        bottom: 40px;
     }
 </style>
 <!DOCTYPE html>
@@ -120,7 +129,7 @@
     <div class="image">
         <div class="text">
             <h1>Maria-Lia Passaglia</h1>
-            <p id = "subtext">creative design & developer.</p>
+            <p id = "subtext">creative designer & developer.</p>
             <p>
                 <button type="button" class="btn btn-outline-dark" onclick="smoothScroll(document.getElementById('about'))">get to know me.</button>
             </p>
@@ -144,83 +153,84 @@
             <p id = "contactInfo">like what you see...contact me at liapassaglia@gmail.com</p>
         </div>
     </div>
-    <div class="container">
+
+    <div class="container-fluid">
     <!--blog like post-->
-    <div class="flex-row">
-        <div class="col-xs-1 text-center">
-        <div id = "about">
-        <h1>about me.</h1>
-        <p id = "paragraph-post">
-            Growing up I embraced my creativity through art and music so when it came time to decide my future career I knew one very simple fact. I needed a space to create.
-            <br>When I took my first programming class, I quickly realized the world of technology would become that space. With every line of code I wrote, my eagerness to learn more
-            heightened as I recognized the endless possibilites for design and development. 
+        <div class="row">
+            <div class="col-xs-1">
+             <p></p>
+            </div>
+        </div>
+        <div class="flex-row" id="about">
+            <div class="col-xs-1 text-center">
+                <h1>about me.</h1>
+                <p class="post" id = "paragraph-post">
+                    Growing up I embraced my creativity through art and music so when it came time to decide my future career I knew one very simple fact. I needed a space to create.
+                    <br>When I took my first programming class, I quickly realized the world of technology would become that space. With every line of code I wrote, my eagerness to learn more
+                    heightened as I recognized the endless possibilites for design and development. 
            
-            <br><br>Today, I am currently a Junior at the University of Florida pursuing a Bachelor's degree in Computer Engineering and a minor in Business Administration. My main interests are
-            in mobile applications, full-stack development, UX/UI design, frontend development and project management. This site serves as a way to showcase the progress I'm making
-            towards gaining new experiences and skills and I'm excited to continue updating it with new projects very soon. 
-            <br>I invite you to explore the space!
-            <br>
-            <img src="img/FSC ID Photo.png" alt="image of me" width="200";>
-            <br>
-            <button type="button" class="btn btn-outline-dark" id="buttonText" onclick="smoothScroll(document.getElementById('resume'))">next</button>
-        </p>
+                    <br><br>Today, I am currently a Junior at the University of Florida pursuing a Bachelor's degree in Computer Engineering and a minor in Business Administration. My main interests are
+                    in mobile applications, full-stack development, UX/UI design, frontend development and project management. This site serves as a way to showcase the progress I'm making
+                    towards gaining new experiences and skills and I'm excited to continue updating it with new projects very soon. 
+                    <br>I invite you to explore the space!
+                    <br>
+                    <img src="img/FSC ID Photo.png" alt="image of me" width="200";>
+                     <br>
+                    <button type="button" class="btn btn-outline-dark" id="buttonText" onclick="smoothScroll(document.getElementById('resume'))">next</button>
+                    <br>
+                    <br>
+                </p>
+            </div>
         </div>
+        <div class="flex-row"  id="resume">
+            <div class="col-xs-1 text-center">
+                <h1>resume.</h1>
+                <p class="post" id = "paragraph-post">
+                    <embed src="Official Resume.pdf" type= "application/pdf" width="80%" height="60%">
+                    <br>
+                    <button type="button" class="btn btn-outline-dark" id="buttonText" onclick="smoothScroll(document.getElementById('projects'))">next</button>
+                </p>
+            </div>
+        </div>
+        <div class="flex-row" id="projects">
+            <div class="col-xs-1 text-center">
+                <h1>projects.</h1>
+                <p id="paragraph-post">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="img/clubfinity.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">mobile application.</h5>
+                                <p class="card-text">contributed to the development of a cross-platform mobile app designed to provide UF student organizations a platform to manage and promote their events by connecting them with students.</p>
+                                <a href="https://gitlab.com/ufsec/clubfinity" class="btn btn-outline-dark" >check it out.</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="img/minesweeper.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">classic videogame.</h5>
+                            <p class="card-text">developing the game strengthened both my knowledge of object-oriented programming and the use of frameworks and libraries such as SFML’s graphics library.</p>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="img/invsystem.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">simple inventory system.</h5>
+                                <p class="card-text">contributed to the creation of an inventory system that handles all the system’s data and compares the execution times of AVL vs Map data structures for large data sets (100,000+). </p>
+                                <a href="https://github.com/imjoelrios/InventorySystem" class="btn btn-outline-dark">check it out.</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <br>
+                <button type="button" class="btn btn-outline-dark" id="returnBtn" onclick="smoothScroll(document.getElementById('navbarSupportedContent'))">return</button>
+                </p>
+            </div>
         </div>
     </div>
-    <div class="flex-row">
-    <div class="col-xs-1 text-center">
-    <div id = "resume">
-        <h1>resume.</h1>
-        <p id = "paragraph-post">
-            <embed src="Official Resume.pdf" type= "application/pdf" width="80%" height="60%">
-            <br>
-            <button type="button" class="btn btn-outline-dark" id="buttonText" onclick="smoothScroll(document.getElementById('projects'))">next</button>
-        </p>
-    </div>
-    </div>
-    </div>
-    <div class="flex-row">
-    <div class="col-xs-1 text-center">
-    <div id = "projects">
-        <h1>projects.</h1>
-        <p id="paragraph-post">
-        <ul class="list-inline">
-            <li class="list-inline-item">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="img/clubfinity.png" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">mobile application.</h5>
-                      <p class="card-text">contributed to the development of a cross-platform mobile app designed to provide UF student organizations a platform to manage and promote their events by connecting them with students.</p>
-                      <a href="https://gitlab.com/ufsec/clubfinity" class="btn btn-outline-dark" >check it out.</a>
-                    </div>
-                </div>
-            </li>
-            <li class="list-inline-item">
-                <div class="card" style="width: 18rem;">
-                    
-                    <img class="card-img-top" src="img/minesweeper.png" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">classic videogame.</h5>
-                      <p class="card-text">developing the game strengthened both my knowledge of object-oriented programming and the use of frameworks and libraries such as SFML’s graphics library.</p>
-                    </div>
-                </div>
-            </li>
-            <li class="list-inline-item">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="img/invsystem.png" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">simple inventory system.</h5>
-                      <p class="card-text">contributed to the creation of an inventory system that handles all the system’s data and compares the execution times of AVL vs Map data structures for large data sets (100,000+). </p>
-                      <a href="https://github.com/imjoelrios/InventorySystem" class="btn btn-outline-dark">check it out.</a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <br>
-        <button type="button" class="btn btn-outline-dark" id="returnBtn" onclick="smoothScroll(document.getElementById('navbarSupportedContent'))">return</button>
-    </p>
-    </div>
-    </div>
-    </div>
-</div>
 </body>
