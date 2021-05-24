@@ -1,43 +1,41 @@
 <!-- PERSONAL WEBSITE -->
 <style>
-    .jumbotron{
-        background-image: url("img/background.png");
-        background-size:cover;
-        background-position-y: center;
-        background-position-x: center;
-        background-position: no-repeat;
-        position: relative;
-        height: 100%;
+    .nav-link{
+        color: #694e6c !important;
+        font-size: 20;
     }
-    #image{
-        background-image: url("img/background.png");
-        background-position-y: -200px;
-        background-position-y: -2.25cm;
+    .jumbotron{
+        position: relative;
+        z-index:-2;
+        padding: 0px !important;
+    }
+    #video-background { 
+        position: relative;
+        overflow: hidden;
+        z-index: -1;
+        width: 100%;
+        height: auto;
     }
     .text h1{
         font-family: 'Sanchez', serif;
         font-weight: 500;
         font-size: 1.75cm;
-        color: black;
-        padding-top: 40px;
+        color: #7d695f;
     }
     .flex-row h1{
         font-family: 'Sanchez', serif;
         font-weight: 500;
         font-size: 1.5cm;
-        color: black;
-        padding-top: 20px;
+        color: #694e6c;
     }
     #subtext{
         padding: 0%;
         font-family: 'Sanchez', serif;
-        font-size: 1cm;
-        color: black;
+        color: #9e8588;
     }
     #contactInfo{
         font-family: 'Sanchez', serif;
         font-size: 0.5cm;
-        color: black;
     }
     .flexrow{
         content: right;
@@ -46,18 +44,26 @@
         background-color: rgb(248, 247, 246);
         justify-content: center;
     }
+    .flex-row p{
+        color: #9e8588;
+    }
     #resume{
-        background-color: rgb(233, 220, 211);
+        background-color: #d9d9d9;
         justify-content: center;
     }
     #projects{
-        background-color: rgb(220, 204, 192);
+        background-color: #c0b5b4;
+        justify-content: center;
+    }
+    #experience{
+        background-color: #a1949d;
         justify-content: center;
     }
     .btn{
         margin-top: 10px;
         font-family: 'Sanchez', serif;
-        color: black;
+        color: #a8a5ad !important;
+        border-color: #a8a5ad !important;
         font-weight: bold;
     }
     .fa{
@@ -67,7 +73,7 @@
         text-align: center;
         text-decoration: none;
         border-radius: 50%;
-        background: rgb(26, 25, 25);
+        background: #a1949d;
         color: #F3EDE4;
     }
     .fa:hover {
@@ -126,6 +132,9 @@
             <li class="nav-item active">
               <a class="nav-link" href="#projects">projects.</a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#experiences">experiences.</a>
+              </li>
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item disabled">
@@ -134,47 +143,20 @@
           </ul>
         </div>
       </nav>
-    <!--landing page-->
-    <div class = "jumbotron jumbotron-fluid">
-    <div class="flex-container">
-                    <div class="text">
-                        <h1>Maria-Lia Passaglia</h1>
-                        <p id = "subtext">creative designer & developer.</p>
-                        <p>
-                            <button type="button" class="btn btn-outline-dark" onclick="smoothScroll(document.getElementById('about'))">get to know me.</button>
-                        </p>
-                        <ul class="list-inline">
-                            <li class="list-inline-item">
-                                <a href="https://github.com/liapassaglia" class="fa fa-github"></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://www.linkedin.com/in/maria-lia-passaglia/" class="fa fa-linkedin"></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://www.facebook.com/marialia.passaglia/" class="fa fa-facebook"></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://www.instagram.com/liapassaglia/" class="fa fa-instagram"></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://open.spotify.com/user/lia_passaglia" class="fa fa-spotify"></a>
-                            </li>
-                        </ul>
-                        <p id = "contactInfo">contact me at liapassaglia@gmail.com</p>
-                    </div>
+    <!--jumbotron-->
+    <div class = "jumbotron">
+        <video id="video-background" preload="" muted="" autoplay="">
+            <source src="./video/Maria-lia passaglia.mp4" type="video/mp4">
+        </video>
     </div>
-</div>
     <div class="container-fluid">
-    <!--blog like post-->
-        <div class="row">
-            <div class="col-xs-1">
-             <p></p>
-            </div>
-        </div>
+    <!--blog like post container-->
         <div class="flex-row" id="about">
             <div class="col-xs-1 text-center">
+                <br>
                 <h1>about me.</h1>
-                <p id = "paragraph-post">
+                <br>
+                <p>
                     Growing up I embraced my creativity through art and music so when it came time to decide my future career I knew one simple fact. 
                     <br>
                     I needed a space to create.
@@ -186,9 +168,32 @@
                     towards gaining new experiences and skills and I'm excited to continue updating it with new projects very soon. 
                     <br>I invite you to explore the space!
                     <br>
-                    <img src="img/FSC ID Photo.png" alt="image of me" width="200";>
-                     <br>
-                    <button type="button" class="btn btn-outline-dark" id="buttonText" onclick="smoothScroll(document.getElementById('resume'))">next</button>
+                    <br>
+                        <img src="img/FSC ID Photo.png" alt="image of me" width="200";>
+                    <div class="flex-container">
+                        <div class="text">
+                            <p> continue getting to know me... </p>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="https://github.com/liapassaglia" class="fa fa-github"></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.linkedin.com/in/maria-lia-passaglia/" class="fa fa-linkedin"></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.facebook.com/marialia.passaglia/" class="fa fa-facebook"></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.instagram.com/liapassaglia/" class="fa fa-instagram"></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://open.spotify.com/user/lia_passaglia" class="fa fa-spotify"></a>
+                                </li>
+                            </ul>
+                            <p id="contactInfo">contact me at liapassaglia@gmail.com</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline" id="buttonText" onclick="smoothScroll(document.getElementById('resume'))">next</button>
                     <br>
                     <br>
                 </p>
@@ -196,11 +201,13 @@
         </div>
         <div class="flex-row"  id="resume">
             <div class="col-xs-1 text-center">
+                <br>
                 <h1>resume.</h1>
+                <br>
                 <p id = "paragraph-post">
                     <embed src="Official Resume.pdf" type= "application/pdf" width="80%" height="75%">
                     <br>
-                    <button type="button" class="btn btn-outline-dark" id="buttonText" onclick="smoothScroll(document.getElementById('projects'))">next</button>
+                    <button type="button" class="btn btn-outline" id="buttonText" onclick="smoothScroll(document.getElementById('projects'))">next</button>
                     <br>
                     <br>
                 </p>
@@ -208,51 +215,122 @@
         </div>
         <div class="flex-row" id="projects">
             <div class="col-xs-1 text-center">
+                <br>
                 <h1>projects.</h1>
+                <br>
                 <p id="paragraph-post">
                 <ul class="list-inline">
                     <li class="list-inline-item">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="img/clubfinity.png" alt="Card image cap">
+                        <div class="card" style="width: 18rem; height:30rem">
+                            <img class="card-img-top" src="img/clubfinity.png" alt="Card image cap" style="width: 18rem;height:10rem">
                             <div class="card-body">
-                                <h5 class="card-title">mobile application.</h5>
+                                <h5 class="card-title">clubfinity</h5>
                                 <p class="card-text">contributed to the development of a cross-platform mobile app designed to provide UF student organizations a platform to manage and promote their events by connecting them with students.</p>
-                                <a href="https://gitlab.com/ufsec/clubfinity" class="btn btn-outline-dark" >check it out.</a>
+                                <a href="https://apps.apple.com/us/app/clubfinity/id1539334633" class="btn btn-outline-dark" >check out the app.</a>
                             </div>
                         </div>
                     </li>
                     <li class="list-inline-item">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="img/minesweeper.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">classic videogame.</h5>
-                            <p class="card-text">developing the game strengthened both my knowledge of object-oriented programming and the use of frameworks and libraries such as SFML’s graphics library.</p>
-                        </div>
-                    </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="img/invsystem.png" alt="Card image cap">
+                        <div class="card" style="width: 18rem; height:30rem">
+                            <img class="card-img-top" src="img/onnl.png" alt="Card image cap" style="width: 18rem;height:10rem">
                             <div class="card-body">
-                                <h5 class="card-title">simple inventory system.</h5>
-                                <p class="card-text">contributed to the creation of an inventory system that handles all the system’s data and compares the execution times of AVL vs Map data structures for large data sets (100,000+). </p>
-                                <a href="https://github.com/imjoelrios/InventorySystem" class="btn btn-outline-dark">check it out.</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="img/onnl.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">web design and development.</h5>
+                                <h5 class="card-title">onnl website</h5>
                                 <p class="card-text">designed and developed a website for the Ocular Neuroscience and Neuroengineering Lab at USF to showcase the lab's research and publications.</p>
-                                <a href="http://www.eng.usf.edu/~passaglia/" class="btn btn-outline-dark">check it out.</a>
+                                <br>
+                                <a href="http://www.eng.usf.edu/~passaglia/" class="btn btn-outline-dark">check out the site.</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <div class="card" style="width: 18rem; height:30rem">
+                            <img class="card-img-top" src="img/stashcash.png" alt="Card image cap" style="width: 18rem;height:10rem">
+                            <div class="card-body">
+                                <h5 class="card-title">stashcash</h5>
+                                <p class="card-text">worked on a team to create a mobile budgeting application with a focus on gathering user requirements and ui/ux design.</p>
+                                <br>
+                                <br>
+                                <a href="https://sites.google.com/view/stashcash/home" class="btn btn-outline-dark">check out the showcase.</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <div class="card" style="width: 18rem; height:30rem">
+                            <img class="card-img-top" src="img/gbv.png" alt="Card image cap" style="width: 18rem;height:10rem">
+                            <div class="card-body">
+                                <h5 class="card-title">gbv website</h5>
+                                <p class="card-text">worked on a team to create a website for the Gator Beach Volleyball Club at UF that allowed for user and admin accounts, event sign-ups, and attendance tracking.</p>
+                                <a href="https://gatorbeachvolleyball.herokuapp.com/" class="btn btn-outline-dark" style="bottom:10rem !important">check out the site.</a>
                             </div>
                         </div>
                     </li>
                 </ul>
                 <br>
-                <button type="button" class="btn btn-outline-dark" id="returnBtn" onclick="smoothScroll(document.getElementById('navbarSupportedContent'))">return</button>
+                <ul>
+                    <li class="list-inline-item">
+                        <div class="card" style="width: 18rem; height:30rem">
+                            <img class="card-img-top" src="img/stocksimplified.png" alt="Card image cap" style="width: 18rem;height:10rem">
+                            <div class="card-body">
+                                <h5 class="card-title">stock simplified</h5>
+                                <p class="card-text">worked on a team to create our own Oracle database with over 2 million tuples of stock data and developed an application to analyze stocks using complex trend queries.</p>
+                                <a href="https://github.com/superbenji711/Database_Project" class="btn btn-outline-dark" style="bottom:10rem !important">check out the code.</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <div class="card" style="width: 18rem; height:30rem">
+                            <img class="card-img-top" src="img/navitrans.PNG" alt="Card image cap" style="width: 18rem;height:10rem">
+                            <div class="card-body">
+                                <h5 class="card-title">navigator translator</h5>
+                                <p class="card-text">used the Google Maps and Google Translate API to create a messaging application to allow spanish speaking and english speaking users to exchange directions.</p>
+                                <a href="https://github.com/liapassaglia/Navigator-Translator" class="btn btn-outline-dark" style="bottom:10rem !important">check out the code.</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-outline" id="buttonText" onclick="smoothScroll(document.getElementById('projects'))">next</button>
+                <br>
+                <br>
+                </p>
+            </div>
+        </div>
+        <div class="flex-row"  id="experience">
+            <div class="col-xs-1 text-center">
+                <br>
+                <h1>experiences.</h1>
+                <br>
+                <p id = "paragraph-post">
+                    <ul>
+                        <li class="list-inline-item">
+                            <div class="card" style="width: 18rem; height:30rem">
+                                <img class="card-img-top" src="img/fics.png" alt="Card image cap" style="width: 18rem;height:10rem">
+                                <div class="card-body">
+                                    <h5 class="card-title">UF FICS Student Software Engineer</h5>
+                                    <p class="card-text">worked with an assigned Phd student to integrate python scripts into a graphical user interface program.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <div class="card" style="width: 18rem; height:30rem">
+                                <img class="card-img-top" src="img/jpmc.PNG" alt="Card image cap" style="width: 18rem;height:10rem">
+                                <div class="card-body">
+                                    <h5 class="card-title">J.P Morgan Software Engineering Internship</h5>
+                                    <p class="card-text">check back later for an update!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <div class="card" style="width: 18rem; height:30rem">
+                                <img class="card-img-top" src="img/ufsa.PNG" alt="Card image cap" style="width: 18rem;height:10rem">
+                                <div class="card-body">
+                                    <h5 class="card-title">UF Student Affairs Student Web Developer</h5>
+                                    <p class="card-text">check back later for an update!</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <br>
+                    <button type="button" class="btn btn-outline" id="returnBtn" onclick="smoothScroll(document.getElementById('navbarSupportedContent'))">return</button>
+                    <br>
                 </p>
             </div>
         </div>
